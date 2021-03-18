@@ -1,13 +1,7 @@
 import $ from 'jquery';
-
-import './module/OAuth';
+import bootstrap from 'bootstrap';
 
 import './module/home';
-import './module/game';
-import './module/video';
-import './module/timer';
-import './module/jquery-request';
-
 
 window.$ = $;
 window.jQuery = $;
