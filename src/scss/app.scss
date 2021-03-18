@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap'); 
+@import url('https://rawgit.com/kenwheeler/slick/master/slick/slick.css');
+
+// @font-face {
+//     font-family: 'PingFang SC Regular';
+//     // src: url(/assets/fonts/PingFang-SC-Regular.woff); 
+//     src: url(../fonts/PingFang-SC-Regular.woff); //this is for dist
+//   }
+
+@font-face {
+  font-family: 'PingFang SC Regular';
+  src: url('../fonts/PingFang-SC-Regular.woff') format('woff'),
+      //  url('myfont.woff') format('woff'),
+      //  url('myfont.ttf') format('truetype');
+}
+
+
+@import "variables/media";
+
+@import "mixin/media";
+
+@import "util/grid";
+
+@import "lib/normalize";
+@import "lib/jquery-modal";
+
+@import "modifier/margin";
+
+@import 'base/base';
+@import 'base/fonts';
+
+// @import 'module/cat';
+// @import 'module/cf';
+@import 'module/modal';
+@import 'module/home';
+@import 'module/navi';
+@import 'module/page-carousel';
+@import 'module/details-page';
+@import 'module/game';
+@import 'module/leaderboard';
+@import 'module/result';
+
+
+

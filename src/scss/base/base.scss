@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: 'PingFang SC Regular';
+    font-size: 14px;
+}
+
+p{
+    margin: 0;
+}
+
+.-lb-hide{
+    position: relative !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
