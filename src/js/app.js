@@ -18,26 +18,45 @@ window.jQuery = $;
 
 var controller = new ScrollMagic.Controller();
 
-var yellowBall = new TimelineMax ().add([
-TweenMax.fromTo(".ball-yellow", 1, {x:500,}, {x:-300, ease: "power4.out"}),
-TweenMax.fromTo(".ball-org", 1, {x:1000,}, {x:-600, ease: "power4.out"}),
-//TweenMax.to(".ball-yellow", 1, {x:-300, ease: "power4.out"}),
+var padBoard = new TimelineMax ().add([
+	// TweenMax.fromTo(".ball-org", 1, {x:0,}, {x: -900, ease: "power4.out"}),	
+	// TweenMax.fromTo(".ball-yellow", 1, {x:-400,}, {x:-900, ease: "power4.out"}),
+	// TweenMax.fromTo(".ball-blue", 1, {x:300,}, {x:900, ease: "power4.out"}),
+	//TweenMax.to(".ball-yellow", 1, {x:-300, ease: "power4.out"}),
+	TweenMax.fromTo(".pad-board", 1, {rotationX: 0, y: 0}, {rotationX: 65, y: -50, ease: "power4.out"}),
 ])
-// var orgBall = new TimelineMax ().add([
-// 	TweenMax.fromTo(".ball-org", 1, {x:500,}, {x:-600, ease: "power4.out"}),
-// ]);
+
+var ballsOnly = new TimelineMax ().add([
+	TweenMax.fromTo(".ball-org", 1, {x:0,}, {x: -900, ease: "power4.out"}),	
+	TweenMax.fromTo(".ball-yellow", 1, {x:-400,}, {x:-900, ease: "power4.out"}),
+	TweenMax.fromTo(".ball-blue", 1, {x:300,}, {x:900, ease: "power4.out"}),
+	//TweenMax.to(".ball-yellow", 1, {x:-300, ease: "power4.out"}),
+	// TweenMax.fromTo(".pad-board", 1, {rotationX: 0, y: 0}, {rotationX: 65, y: 0, ease: "power4.out"}),
+])
 
 const section1 = new ScrollMagic.Scene({
 	triggerElement: ".sec-intro",
 	triggerHook: "onLeave",
-	duration: "300%"
+	duration: "100%"
 	})
 	.setPin(".sec-intro")
-	.setTween(yellowBall)
+	.setTween(padBoard)
 	.addIndicators({
 		colorTrigger: "red",
 		colorStart:"red",
 		colorEnd:"red",
+		indent:10
+	})
+	.addTo(controller);
+
+const sectionBalls =  new ScrollMagic.Scene({
+	triggerElement: ".ball-trigger", duration: 1350,
+	})
+	.setTween(ballsOnly)
+	.addIndicators({
+		colorTrigger: "purple",
+		colorStart:"purple",
+		colorEnd:"purple",
 		indent:10
 	})
 	.addTo(controller);
@@ -56,21 +75,9 @@ const demo = new ScrollMagic.Scene({
 	})
 	.setPin(".box2")
 	.addIndicators({
-		colorTrigger: "blue",
-		colorStart:"yellow",
-		colorEnd:"#3dd68c",
+		colorTrigger: "green",
+		colorStart:"green",
+		colorEnd:"green",
 		indent:10
 	})
 	.addTo(controller);
-
-
-	let isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-
-	console.log("is Chrome ? ", isChrome);
-
-	let y = 0;
-
-	// initial smooth-scrollbar
-	let scroll = Scrollbar.init(
-		document.querySelector("#container-scroll")
-	  );

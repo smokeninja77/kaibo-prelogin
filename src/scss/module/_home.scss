@@ -2,9 +2,19 @@
   position: relative;
   height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
   .text-wrap{
     display: flex;
     flex-direction: column;
+    padding-top: 120px;
+    @media only screen and (max-height: 800px) {
+      transform: scale(0.87);
+    }
+    @media only screen and (max-height: 800px) {
+      padding-top: 80px;
+      transform: scale(0.80);
+    }
   }
   h1{
     font-size: 68px;
@@ -14,6 +24,7 @@
     -webkit-text-fill-color: transparent;
     background-size: cover;
     margin: 0 auto;
+    line-height: 77px;
   }
   p{
     margin: 0 auto;
@@ -21,9 +32,11 @@
     font-size: 24px;
     max-width: 552px;
     text-align: center;
+    line-height: 28px;
   }
   .balls-wrap{
     height: 100%;
+    position: relative;
     .ball{
       border-radius: 50%;
       position: absolute;
@@ -32,25 +45,61 @@
         width: 106px;
         height: 106px;
         bottom: 250px;
+        left: 50%;
       }
       &-yellow{
         background-color: #FADA6C;
         width: 384px;
         height: 384px;
         bottom: -180px;
-        left: 350px;
+        left: 50%;
       }
       &-blue{
         background-color: #223FD5;
         width: 303px;
         height: 303px;
-        right: 100px;
-        bottom: 350px;
+        right: 50%;
+        bottom: 100px;
+        transform: translateX(50%);
       }
+    }
+  }
+
+  .pad-board-wrap{
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    perspective: 1000px;
+    height: 55%;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    .pad-board{
+      margin: 0 auto;
     }
   }
 }
 
+.ball-trigger-wrap{
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  .ball-trigger{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+  }
+}
 
 
 
