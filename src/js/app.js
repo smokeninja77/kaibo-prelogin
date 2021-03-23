@@ -62,21 +62,25 @@ const sectionBalls =  new ScrollMagic.Scene({
 	.addTo(controller);
 
 
-var phoneText = new TimelineMax().add([
-	TweenMax.fromTo(".line-1", 1, {y:0, autoAlpha:1}, {y: -900, autoAlpha: 0, ease: "power4.out"}),	
-])
+// var phoneText = new TimelineMax().add([
+// 	TweenMax.fromTo(".line-1", 600, {y:0, autoAlpha:1}, {y: -900, autoAlpha: 0, ease: "power4.out"}),	
+// ])
+// var phoneFade = new TimelineMax().add([
+// 	TweenMax.to(".slide-phone-img", .4, {autoAlpha:0, ease: Linear.easeNone}),
+// ])
 
-var phoneFade = new TimelineMax().add([
-	TweenMax.to(".slide-phone-img", .4, {autoAlpha:0, ease: Linear.easeNone}),
-])
+var h = new TimelineMax();
+h.to((".slide-phone-img"), 10, { autoAlpha: 1, y: -300, ease: Power1.easeNone }, 0)
+.fromTo((".line-1"), 5, { autoAlpha: 1, y: 0}, {autoAlpha: 0, y: -300, ease: Power1.easeNone}, 5)
+.to((".line-2"), 0.1, { autoAlpha: 1, x: 600, ease: Power1.easeNone }, 8)
 
 const phoneScene =  new ScrollMagic.Scene({
 	triggerElement: ".sec-phone",
 	triggerHook: "onLeave",
-	duration: "300%"
+	duration: "300%",
 	})
 	.setPin(".sec-phone")
-	.setTween(phoneText)
+	.setTween(h)
 	.addIndicators({
 		colorTrigger: "black",
 		colorStart: "black",
@@ -84,21 +88,6 @@ const phoneScene =  new ScrollMagic.Scene({
 		indent:10
 	})
 	.addTo(controller);
-
-
-const phoneFadeScene =  new ScrollMagic.Scene({
-	triggerElement: ".phone-trigger",
-	})
-	.setTween(phoneFade)
-	.addIndicators({
-		colorTrigger: "pink",
-		colorStart:"pink",
-		colorEnd:"pink",
-		indent:10
-	})
-	.addTo(controller);
-
-
 
 
 
