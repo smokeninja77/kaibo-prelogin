@@ -1,6 +1,6 @@
 //===== MARGIN PADDING SPACING //
 
-$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 80, 85, 90, 95, 100, 120, 130, 140, 160, 180); // Adjust this to include the pixel amounts you need.
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 80, 85, 90, 95, 100, 120, 130, 140, 160, 180, 200, 220, 240, 260, 280, 300); // Adjust this to include the pixel amounts you need.
 $sides: (top, bottom, left, right); // Leave this variable alone
 
 @each $space in $spaceamounts { 
@@ -16,7 +16,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 }
 
 @include media-breakpoint-up(md){ //min-width: 768px
-	$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 80, 85, 90, 95, 100, 120, 130, 140, 160, 180); // Adjust this to include the pixel amounts you need.
+	$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 80, 85, 90, 95, 100, 120, 130, 140, 160, 180, 200, 220, 240, 260, 280, 300); // Adjust this to include the pixel amounts you need.
 	$sides: (top, bottom, left, right); // Leave this variable alone
 
 	@each $space in $spaceamounts {
@@ -34,7 +34,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 }
 
 @include media-breakpoint-up(lg){ //min-width: 992px
-	$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 80, 85, 90, 95, 100, 120, 130, 140, 160, 180); // Adjust this to include the pixel amounts you need.
+	$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 80, 85, 90, 95, 100, 120, 130, 140, 160, 180, 200, 220, 240, 260, 280, 300); // Adjust this to include the pixel amounts you need.
 	$sides: (top, bottom, left, right); // Leave this variable alone
 
 	@each $space in $spaceamounts {
@@ -52,7 +52,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 }
 
 @include media-breakpoint-up(xl){ //min-width: 1200px;
-	$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 80, 85, 90, 95, 100, 120, 130, 140, 160, 180); // Adjust this to include the pixel amounts you need.
+	$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 80, 85, 90, 95, 100, 120, 130, 140, 160, 180, 200, 220, 240, 260, 280, 300); // Adjust this to include the pixel amounts you need.
 	$sides: (top, bottom, left, right); // Leave this variable alone
 
 	@each $space in $spaceamounts {

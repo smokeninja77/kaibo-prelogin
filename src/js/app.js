@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import bootstrap from 'bootstrap';
+import "./module/tilt"
 // import Scrollbar from 'smooth-scrollbar';
 
 
@@ -19,20 +20,19 @@ window.jQuery = $;
 var controller = new ScrollMagic.Controller();
 
 var padBoard = new TimelineMax ().add([
-	// TweenMax.fromTo(".ball-org", 1, {x:0,}, {x: -900, ease: "power4.out"}),	
-	// TweenMax.fromTo(".ball-yellow", 1, {x:-400,}, {x:-900, ease: "power4.out"}),
-	// TweenMax.fromTo(".ball-blue", 1, {x:300,}, {x:900, ease: "power4.out"}),
-	//TweenMax.to(".ball-yellow", 1, {x:-300, ease: "power4.out"}),
 	TweenMax.fromTo(".pad-board", 1, {rotationX: 0, y: 0}, {rotationX: 65, y: -50, ease: "power4.out"}),
+	TweenMax.fromTo(".intro-des-wrap", 1, {y:250, opacity: 0}, {y: 0, opacity:1, ease: "power4.out"}),	
 ])
 
 var ballsOnly = new TimelineMax ().add([
 	TweenMax.fromTo(".ball-org", 1, {x:0,}, {x: -900, ease: "power4.out"}),	
 	TweenMax.fromTo(".ball-yellow", 1, {x:-400,}, {x:-900, ease: "power4.out"}),
 	TweenMax.fromTo(".ball-blue", 1, {x:300,}, {x:900, ease: "power4.out"}),
-	//TweenMax.to(".ball-yellow", 1, {x:-300, ease: "power4.out"}),
-	// TweenMax.fromTo(".pad-board", 1, {rotationX: 0, y: 0}, {rotationX: 65, y: 0, ease: "power4.out"}),
 ])
+
+// var introTextFloat = new TimelineMax ().add([
+// 	TweenMax.fromTo(".intro-des-wrap", 1, {y:-250,}, {y: -0, ease: "power4.out"}),	
+// ])
 
 const section1 = new ScrollMagic.Scene({
 	triggerElement: ".sec-intro",
@@ -61,12 +61,49 @@ const sectionBalls =  new ScrollMagic.Scene({
 	})
 	.addTo(controller);
 
-// var screneArtDraw = new ScrollMagic.Scene({
-// 				triggerElement: ".ball-yellow", duration: 400, triggerHook: 0.5
-// 			  })
-// 				.setTween(tweenArtDraw)
-// 				.addIndicators({colorTrigger: "black"})
-// 				.addTo(controller);
+
+var phoneText = new TimelineMax().add([
+	TweenMax.fromTo(".line-1", 1, {y:0, autoAlpha:1}, {y: -900, autoAlpha: 0, ease: "power4.out"}),	
+])
+
+var phoneFade = new TimelineMax().add([
+	TweenMax.to(".slide-phone-img", .4, {autoAlpha:0, ease: Linear.easeNone}),
+])
+
+const phoneScene =  new ScrollMagic.Scene({
+	triggerElement: ".sec-phone",
+	triggerHook: "onLeave",
+	duration: "300%"
+	})
+	.setPin(".sec-phone")
+	.setTween(phoneText)
+	.addIndicators({
+		colorTrigger: "black",
+		colorStart: "black",
+		colorEnd: "black",
+		indent:10
+	})
+	.addTo(controller);
+
+
+const phoneFadeScene =  new ScrollMagic.Scene({
+	triggerElement: ".phone-trigger",
+	})
+	.setTween(phoneFade)
+	.addIndicators({
+		colorTrigger: "pink",
+		colorStart:"pink",
+		colorEnd:"pink",
+		indent:10
+	})
+	.addTo(controller);
+
+
+
+
+
+
+
 
 const demo = new ScrollMagic.Scene({
 	triggerElement: ".box2",
