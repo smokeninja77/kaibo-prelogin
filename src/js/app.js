@@ -61,23 +61,22 @@ const sectionBalls =  new ScrollMagic.Scene({
 	})
 	.addTo(controller);
 
-
-// var phoneText = new TimelineMax().add([
-// 	TweenMax.fromTo(".line-1", 600, {y:0, autoAlpha:1}, {y: -900, autoAlpha: 0, ease: "power4.out"}),	
-// ])
-// var phoneFade = new TimelineMax().add([
-// 	TweenMax.to(".slide-phone-img", .4, {autoAlpha:0, ease: Linear.easeNone}),
-// ])
-
 var h = new TimelineMax();
-h.to((".slide-phone-img"), 10, { autoAlpha: 1, y: -300, ease: Power1.easeNone }, 0)
-.fromTo((".line-1"), 5, { autoAlpha: 1, y: 0}, {autoAlpha: 0, y: -300, ease: Power1.easeNone}, 5)
-.to((".line-2"), 0.1, { autoAlpha: 1, x: 600, ease: Power1.easeNone }, 8)
+h.fromTo((".line-1"), 3, {y: 20}, {y: -300, ease: Power1.easeNone}, 1)
+.fromTo((".line-1"), 0.5, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 1)
+.fromTo((".line-2-title"), 3, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -150, ease: Power1.easeNone}, 1.2)
+.fromTo((".line-2"), 3, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -150, ease: Power1.easeNone}, 1.2)
+.fromTo((".slide-phone-img"), 0.1, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 1.2)
+.fromTo((".front-phone-img"), 3, { autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeNone}, 1.2)
+
+
+
+
 
 const phoneScene =  new ScrollMagic.Scene({
 	triggerElement: ".sec-phone",
 	triggerHook: "onLeave",
-	duration: "300%",
+	duration: "180%",
 	})
 	.setPin(".sec-phone")
 	.setTween(h)
@@ -88,10 +87,6 @@ const phoneScene =  new ScrollMagic.Scene({
 		indent:10
 	})
 	.addTo(controller);
-
-
-
-
 
 
 const demo = new ScrollMagic.Scene({

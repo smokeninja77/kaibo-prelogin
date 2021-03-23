@@ -161,6 +161,7 @@
   flex-direction: column;
   overflow: hidden;
   padding-top: 120px;
+  overflow: hidden;
   .phone-con{
     height: 100%;
   }
@@ -208,11 +209,21 @@
   .phone-wrap{
     display: flex;
     justify-content: center;
-    padding: 55px;
-    padding-top: 0px;
     height: 100%;
-    img{
-      
+    .slide-phone-img{
+      position: absolute;
+      height: 100%;
+      display: block;
+      padding: 55px;
+      padding-top: 0px;
+    }
+    .front-phone-img{
+      position: absolute;
+      height: 100%;
+      display: block;
+      padding: 55px;
+      padding-top: 0px;
+      opacity: 0;
     }
   }
 }
