@@ -69,7 +69,7 @@
   .pad-board-wrap{
     position: relative;
     z-index: 1;
-    max-width: 1200px;
+    // max-width: 1200px;
     margin: 0 auto;
     perspective: 1000px;
     height: 55%;
@@ -171,8 +171,9 @@
     left: 0;
     transform: translateY(-50%);
     margin-left: -200px;
+    width: 120%;
     img{
-      width: 120%;
+      width: 100%;
     }
   }
   .sub-text{
@@ -262,6 +263,8 @@
       height: 100%;
       .img-mb-wrap{
         position: relative;
+        display: flex;
+        justify-content: center;
         .point-1{
           position: absolute;
           left: 0;
@@ -336,6 +339,8 @@
           left: 0;
           opacity: 0;
           height: 100%;
+          right: 0;
+          margin: 0 auto;
         }
       }
     }
@@ -438,24 +443,67 @@
 }
 
 .sec-end{
-  .title{
-    background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-    max-width: 533px;
-    font-size: 52px;
-    font-weight: 600;
-  }
-  .btm-bar{
-    width: 100%;
-    background-color: #431FC3;
-    height: 250px;
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
+  .row-card{
+    .text-wrap{
+      display: flex;
+      justify-content: flex-end;
+      .title{
+        background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        max-width: 533px;
+        font-size: 52px;
+        font-weight: 600;
+        margin-top: 100px;
+      }
+    }
+    .btm-bar{
+      width: 100%;
+      background-color: #431FC3;
+      height: 250px;
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      &-text-wrap{
+        display: flex;
+        justify-content: flex-end;
+        .cont-stat-no{
+          max-width: 533px;
+          margin-top: 60px;
+          padding-right: 100px;
+          .wrap-stat{
+            display: flex;
+            font-size: 64px;
+            color: #fff;
+            font-weight: 400;
+            .left{
+              border-right: .5px solid #ddd ;
+              padding-right: 35px;
+              .no{
+                line-height: 1;
+              }
+            }
+            .right{
+              padding-left: 35px;
+              .no{
+                line-height: 1;
+              }
+            }
+            span{
+              font-size: 36px;
+            }
+            p{
+              font-size: 18px;
+              font-weight: 300;
+              color: #EEECFA;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
