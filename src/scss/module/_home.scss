@@ -228,7 +228,183 @@
   }
 }
 
+.sec-whattodo{
+  background-color: #FAF9FA;
+  &-wording{
+    padding-bottom: 200px;
+    .what-title{
+      text-align: center;
+      font-size: 98px;
+      font-weight: 300;
+      color: #222;
+    }
+    .what-sub{
+      text-align: center;
+      font-size: 24px;
+      font-weight: 300;
+      color: #222;
+      max-width: 480px;
+      margin: 0 auto;
+      margin-top: 45px;
+      line-height: 32px;
+    }
+  }
+  &-marketing{
+    padding-top: 260px;
+    padding-bottom: 180px;
+    background-color: #FAF9FA;
+    height: 100vh;
+    .board-mar{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+      height: 100%;
+      .img-mb-wrap{
+        position: relative;
+        .point-1{
+          position: absolute;
+          left: 0;
+          top: -140px;
+          font-size: 36px;
+          font-weight: 600;
+          max-width: 382px;
+          z-index: 1;
+          p{
+            line-height: 38px;
+          }
+          span{
+            font-size: 16px;
+            font-weight: 500;
+            background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+          }
+        }
+        .point-2{
+          position: absolute;
+          right: 0;
+          bottom: 0px;
+          font-size: 36px;
+          font-weight: 600;
+          max-width: 485px;
+          z-index: 1;
+          p{
+            line-height: 38px;
+          }
+          span{
+            font-size: 16px;
+            font-weight: 500;
+            background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+          }
+        }
+        .point-3{
+          position: absolute;
+          left: 0;
+          bottom: 0px;
+          font-size: 36px;
+          font-weight: 600;
+          max-width: 485px;
+          z-index: 1;
+          p{
+            line-height: 38px;
+          }
+          span{
+            font-size: 16px;
+            font-weight: 500;
+            background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+          }
+        }
+        .img-mb-1{
+          height: 100%;
+        }
+        .img-mb-2, .img-mb-3{
+          position: absolute;
+          left: 0;
+          opacity: 0;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
 
+.sec-static{
+  .key-text{
+    background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .ai-title{
+    background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-size: 60px;
+    font-weight: 500;
+    max-width: 916px;
+    margin: 0 auto;
+    margin-top: 15px;
+    line-height: 70px;
+  }
+  .row-card{
+    .card-col{
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      padding: 60px;
+      &-text{
+        .wrap{
+          width: 422px;
+          .number{
+            background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+          }
+          .title{
+            font-size: 36px;
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 16px;
+          }
+          .text{
+            font-size: 24px;
+            color: #383838;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
 
 
 

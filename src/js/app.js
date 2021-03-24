@@ -69,10 +69,6 @@ h.fromTo((".line-1"), 3, {y: 20}, {y: -300, ease: Power1.easeNone}, 1)
 .fromTo((".slide-phone-img"), 0.1, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 1.2)
 .fromTo((".front-phone-img"), 3, { autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeNone}, 1.2)
 
-
-
-
-
 const phoneScene =  new ScrollMagic.Scene({
 	triggerElement: ".sec-phone",
 	triggerHook: "onLeave",
@@ -87,6 +83,47 @@ const phoneScene =  new ScrollMagic.Scene({
 		indent:10
 	})
 	.addTo(controller);
+
+
+var marketingAnimate = new TimelineMax();
+marketingAnimate.fromTo((".point-1"),5 , { y: 0} , { y: -600, ease: Power1.easeNone}, 1)
+.fromTo((".point-2"),5 , { y: 400} , { y: -800, ease: Power1.easeNone}, 1)
+.fromTo((".point-3"),7 , { y: 700} , { y: -500, ease: Power1.easeNone}, 2)
+
+.fromTo((".img-mb-1"),2 , { autoAlpha: 1} , { autoAlpha:0, ease: Power1.easeNone}, 1.5)
+.fromTo((".img-mb-2"),2 , { autoAlpha: 0}, { autoAlpha:1, ease: Power1.easeNone}, 1.5)
+.fromTo((".img-mb-3"),2 , { autoAlpha: 0} , { autoAlpha:1, ease: Power1.easeNone}, 5)
+.to((".img-mb-2"),2 , { autoAlpha:0, ease: Power1.easeNone}, 5)
+
+
+const marketingScene = new ScrollMagic.Scene({
+	triggerElement: ".sec-whattodo-marketing",
+	triggerHook: "onLeave",
+	duration: "500%",
+	})
+	.setTween(marketingAnimate)
+	.setPin(".sec-whattodo-marketing")
+	.addIndicators({
+		colorTrigger: "yellow",
+		colorStart: "yellow",
+		colorEnd: "yellow",
+		indent:10
+	})
+	.addTo(controller);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const demo = new ScrollMagic.Scene({
