@@ -1,6 +1,7 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import bootstrap from 'bootstrap';
-import "./module/tilt"
+import "./module/tilt";
+import "./module/form"
 // import Scrollbar from 'smooth-scrollbar';
 
 
@@ -13,8 +14,8 @@ import "./module/tilt"
 // import * as ScrollMagic.ind from "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"
 
 
-window.$ = $;
-window.jQuery = $;
+// window.$ = $;
+// window.jQuery = $;
 
 
 var controller = new ScrollMagic.Controller();
@@ -87,8 +88,8 @@ const phoneScene =  new ScrollMagic.Scene({
 
 var marketingAnimate = new TimelineMax();
 marketingAnimate.fromTo((".point-1"),5 , { y: 0} , { y: -600, ease: Power1.easeNone}, 1)
-.fromTo((".point-2"),5 , { y: 400} , { y: -800, ease: Power1.easeNone}, 1)
-.fromTo((".point-3"),7 , { y: 700} , { y: -500, ease: Power1.easeNone}, 2)
+.fromTo((".point-2"),5 , { y: 400, zIndex: 1} , { y: -800, zIndex: 1, ease: Power1.easeNone}, 1)
+.fromTo((".point-3"),7 , { y: 700, zIndex: 1} , { y: -500, zIndex: 1, ease: Power1.easeNone}, 2)
 
 .fromTo((".img-mb-1"),2 , { autoAlpha: 1} , { autoAlpha:0, ease: Power1.easeNone}, 1.5)
 .fromTo((".img-mb-2"),2 , { autoAlpha: 0}, { autoAlpha:1, ease: Power1.easeNone}, 1.5)

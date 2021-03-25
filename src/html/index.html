@@ -445,25 +445,33 @@
                 </div>
                 <div class="col-md-6">
                     <div>
-                        <form action="/action_page.php">
-                            <label for="fname">First name:</label><br>
-                            <input type="text" id="fname" name="fname" value="John"><br>
-                            <label for="lname">Last name:</label><br>
-                            <input type="text" id="lname" name="lname" value="Doe"><br><br>
-                            <label for="fname">First name:</label><br>
-                            <input type="text" id="fname" name="fname" value="John"><br>
-                            <label for="lname">Last name:</label><br>
-                            <input type="text" id="lname" name="lname" value="Doe"><br><br>
-                            <label for="fname">First name:</label><br>
-                            <input type="text" id="fname" name="fname" value="John"><br>
-                            <label for="lname">Last name:</label><br>
-                            <input type="text" id="lname" name="lname" value="Doe"><br><br>
-                            <label for="fname">First name:</label><br>
-                            <input type="text" id="fname" name="fname" value="John"><br>
-                            <label for="lname">Last name:</label><br>
-                            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <form class="kb-form" action="/action_page.php">
+                            <div class="form-wrap">
+                                <div class="form-row form-row-select m-b-20">
+                                    <label class="form-label" for="Purpose">Purpose</label>
+                                    <select class="form-input select-input" name="business" id="business">
+                                        <option value="New Business">New Business</option>
+                                        <option value="CF">CF</option>
+                                        <option value="Aiken">Aiken</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
 
-                            <input type="submit" value="Submit">
+                                <div class="form-row m-b-20">
+                                    <label class="form-label" for="username">Your Name</label>
+                                    <input class="form-input" type="text" id="username" name="username" value=""><br>
+                                </div>
+                                <div class="form-row m-b-20">
+                                    <label class="form-label" for="Company">Company</label>
+                                    <input class="form-input" type="text" id="Company" name="Company" value=""><br>
+                                </div>
+                                <div class="form-row m-b-20">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-input" type="email" id="email" name="email" value=""><br>
+                                </div>
+
+                                <input type="submit" value="Send">
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -483,7 +491,7 @@
     <div class="box2">Pin it.</div>
     <div class="box3">The End.</div> -->
 </div>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
