@@ -1,0 +1,22 @@
+@keyframes horizontalMove {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+    transform: translateX(-100%);
+    }
+  }
+
+@keyframes floating {
+    0% {
+        transform: translatey(0px) rotate(0deg);
+    }
+    50% {
+        transform: translatey(80px) rotate(180deg);
+    }
+    100% {
+        transform: translatey(0px) rotate(360deg);
+    }
+}
+
+// animation: floatimages-alt 10s ease-in-out infinite;

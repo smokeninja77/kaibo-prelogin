@@ -122,30 +122,42 @@ const marketingScene = new ScrollMagic.Scene({
 	.addTo(controller);
 
 
+var number = 0;
+var containers = $('.container');
 
 
 
 
+// var myInterval = setInterval(function() {
+//     document.getElementById('my-id').style.backgroundColor = colors[(++cur_color) % colors.length];
+// }, 2000);
 
+// $('.horizontal-wrap').each(function () {
+// 	var $this = $(this);
+// 	jQuery({ Counter: 0 }).animate( {
+// 	  duration: 1000,
+// 	  easing: 'swing',
+// 	  step: function () {
+// 		for (var i = 0; i < 100	; i++) {
+// 			// console.log(number);
+// 			$this.css('transform', 'translate3d('+ ++number +'px, 0, 0)');  
+// 		}
+// 	  }
+// 	});
+//   });
 
+var sozai = new TimelineMax();
+sozai.fromTo((".horizontal-wrap"),50 , { x: 0} , { x: -3000, ease: Linear.easeNone}, )
+// sozai.repeat(2).yoyo(true).play()
 
-
-
-
-
-
-
-
-const demo = new ScrollMagic.Scene({
-	triggerElement: ".box2",
-	triggerHook: "onLeave",
-	duration: "300%"
+const textScene =  new ScrollMagic.Scene({
+	triggerElement: ".sec-whattodo"
 	})
-	.setPin(".box2")
+	.setTween(sozai)
 	.addIndicators({
-		colorTrigger: "green",
-		colorStart:"green",
-		colorEnd:"green",
+		colorTrigger: "red",
+		colorStart:"red",
+		colorEnd:"red",
 		indent:10
 	})
 	.addTo(controller);
