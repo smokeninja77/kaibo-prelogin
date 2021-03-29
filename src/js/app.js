@@ -1,6 +1,7 @@
 // import $ from 'jquery';
 import bootstrap from 'bootstrap';
 import "./module/tilt";
+import "./module/horinzotalAnimate";
 import "./module/form"
 // import Scrollbar from 'smooth-scrollbar';
 
@@ -23,12 +24,19 @@ var controller = new ScrollMagic.Controller();
 var padBoard = new TimelineMax ().add([
 	TweenMax.fromTo(".pad-board", 1, {rotationX: 0, y: 0}, {rotationX: 65, y: -50, ease: "power4.out"}),
 	TweenMax.fromTo(".intro-des-wrap", 1, {y:250, opacity: 0}, {y: 0, opacity:1, ease: "power4.out"}),	
+
+	TweenMax.fromTo(".pad-board-1", 1, {rotationX: 0, y: 0, x: 0, z: 0}, {rotationX: 65, y: -30, x: 10, z: 0, ease: "power4.out"}),
+	TweenMax.to(".pad-board-1", 1, {boxShadow: "10px 10px 37px -5px rgba(0,0,0 , 0.3)"}),
+	TweenMax.fromTo(".pad-board-2", 1, {rotationX: 0, y: 0, x: 0, z: 0}, {rotationX: 65, y: -51, x: 0, z: 0, ease: "power4.out"}),
+	TweenMax.to(".pad-board-2", 1, {boxShadow: "10px 10px 37px -5px rgba(0,0,0 , 0.3)"}),
+
+	TweenMax.to(".mask-text", 1, {backgroundImage: "720deg, #081E72, #A64388, #D8597E"})
 ])
 
 var ballsOnly = new TimelineMax ().add([
-	TweenMax.fromTo(".ball-org", 1, {x:0,}, {x: -900, ease: "power4.out"}),	
-	TweenMax.fromTo(".ball-yellow", 1, {x:-400,}, {x:-900, ease: "power4.out"}),
-	TweenMax.fromTo(".ball-blue", 1, {x:300,}, {x:900, ease: "power4.out"}),
+	TweenMax.fromTo(".ball-org", 1, {x:-500,}, {x: -900, ease: "power4.out"}),	
+	TweenMax.fromTo(".ball-yellow", 1, {x:-600,}, {x:-900, ease: "power4.out"}),
+	TweenMax.fromTo(".ball-blue", 1, {x:500,}, {x:900, ease: "power4.out"}),
 ])
 
 // var introTextFloat = new TimelineMax ().add([
@@ -63,12 +71,13 @@ const sectionBalls =  new ScrollMagic.Scene({
 	.addTo(controller);
 
 var h = new TimelineMax();
-h.fromTo((".line-1"), 3, {y: 20}, {y: -300, ease: Power1.easeNone}, 1)
-.fromTo((".line-1"), 0.5, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 1)
-.fromTo((".line-2-title"), 3, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -150, ease: Power1.easeNone}, 1.2)
-.fromTo((".line-2"), 3, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -150, ease: Power1.easeNone}, 1.2)
-.fromTo((".slide-phone-img"), 0.1, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 1.2)
-.fromTo((".front-phone-img"), 3, { autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeNone}, 1.2)
+h.set(".overlay-mask", {className:"+=active"}, 0.01)
+.fromTo((".line-1"), 5, {y: 20}, {y: -300, ease: Power1.easeNone}, 4)
+.fromTo((".line-1"), 2.5, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 4)
+.fromTo((".line-2-title"), 5, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -150, ease: Power1.easeNone}, 4.2)
+.fromTo((".line-2"), 5, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -150, ease: Power1.easeNone}, 4.2)
+.fromTo((".slide-phone-img"), 2.1, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 4.2)
+.fromTo((".front-phone-img"), 2.3, { autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeNone}, 4.2)
 
 const phoneScene =  new ScrollMagic.Scene({
 	triggerElement: ".sec-phone",
