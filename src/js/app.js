@@ -74,10 +74,11 @@ var h = new TimelineMax();
 h.set(".overlay-mask", {className:"+=active"}, 0.01)
 .fromTo((".line-1"), 5, {y: 20}, {y: -300, ease: Power1.easeNone}, 4)
 .fromTo((".line-1"), 2.5, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 4)
-.fromTo((".line-2-title"), 5, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -150, ease: Power1.easeNone}, 4.2)
-.fromTo((".line-2"), 5, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -150, ease: Power1.easeNone}, 4.2)
+.fromTo((".line-2-title"), 5, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -170, ease: Power1.easeNone}, 4.2)
+.fromTo((".line-2"), 5, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -170, ease: Power1.easeNone}, 4.2)
 .fromTo((".slide-phone-img"), 2.1, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 4.2)
 .fromTo((".front-phone-img"), 2.3, { autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeNone}, 4.2)
+.to(".main-text", 10, {backgroundImage: "720deg, #081E72, #A64388, #D8597E"}, 0)
 
 const phoneScene =  new ScrollMagic.Scene({
 	triggerElement: ".sec-phone",
@@ -146,14 +147,14 @@ var containers = $('.container');
 // 	});
 //   });
 
-var sozai = new TimelineMax();
-sozai.fromTo((".horizontal-wrap"),50 , { x: 0} , { x: -3000, ease: Linear.easeNone}, )
+var horizontalMove = new TimelineMax();
+horizontalMove.fromTo((".horizontal-wrap"),50 , { x: 0} , { x: -3000, ease: Linear.easeNone}, )
 // sozai.repeat(2).yoyo(true).play()
 
 const textScene =  new ScrollMagic.Scene({
 	triggerElement: ".sec-whattodo"
 	})
-	.setTween(sozai)
+	.setTween(horizontalMove)
 	.addIndicators({
 		colorTrigger: "red",
 		colorStart:"red",
@@ -161,3 +162,95 @@ const textScene =  new ScrollMagic.Scene({
 		indent:10
 	})
 	.addTo(controller);
+
+var enterKaibo = new TimelineMax().set(".ver-text", {className:"+=active"}, 0.01)
+
+const enterKaiboScene =  new ScrollMagic.Scene({
+	triggerElement: ".sec-whattodo-marketing"
+	})
+	.setTween(enterKaibo)
+	.addIndicators({
+		colorTrigger: "pink",
+		colorStart:"pink",
+		colorEnd:"pink",
+		indent:10
+	})
+	.addTo(controller);
+
+// gradient greensock
+
+var tweenGradientAi = new TimelineMax ().add([
+		TweenMax.to(".ai-title", 1, {backgroundImage: "720deg, #081E72, #A64388, #D8597E"})
+      ]);
+
+var tweenGradientAiScreen = new ScrollMagic.Scene({
+				triggerElement: ".ai-title", duration: 1000
+				})
+				.setTween(tweenGradientAi)
+				.addIndicators() // add indicators (requires plugin)
+				.addTo(controller);
+
+var tweenGradientAnalyze = new TimelineMax ().add([
+		TweenMax.to(".text-grad", 1, {backgroundImage: "720deg, #081E72, #A64388, #D8597E"})
+	]);
+
+var sceneMainText = new ScrollMagic.Scene({
+	triggerElement: ".text-grad", duration: 1000
+	})
+	.setTween(tweenGradientAnalyze)
+	.addIndicators() // add indicators (requires plugin)
+	.addTo(controller);
+
+// END gradient greensock
+
+
+var cardImgSlideIn1 = new TimelineMax().set(".card-img-1", {className:"+=active"}, 0.01)
+var cardImgSlideIn2 = new TimelineMax().set(".card-img-2", {className:"+=active"}, 0.01)
+var cardImgSlideIn3 = new TimelineMax().set(".card-img-3", {className:"+=active"}, 0.01)
+// var cardImgSlideIn4 = new TimelineMax().set(".card-img-4", {className:"+=active"}, 0.01)
+
+const cardImgSlideInScene =  new ScrollMagic.Scene({
+	triggerElement: ".card-img-1",
+	reverse: false
+	})
+	.setTween(cardImgSlideIn1)
+	.addIndicators()
+	.addTo(controller);
+
+const cardImgSlideInScene2 =  new ScrollMagic.Scene({
+	triggerElement: ".card-img-2",
+	reverse: false
+	})
+	.setTween(cardImgSlideIn2)
+	.addIndicators()
+	.addTo(controller);
+
+const cardImgSlideInScene3 =  new ScrollMagic.Scene({
+	triggerElement: ".card-img-3",
+	reverse: false
+	})
+	.setTween(cardImgSlideIn3)
+	.addIndicators()
+	.addTo(controller);
+
+
+var arrowPointDown = new TimelineMax().set(".arrow-point-down", {className:"+=active"}, 0.01)
+const arrowPointDownScene =  new ScrollMagic.Scene({
+	triggerElement: ".card-img-4",
+	reverse: true
+	})
+	.setTween(arrowPointDown)
+	.addIndicators()
+	.addTo(controller);
+
+
+var cardImgSlideIn5 = new TimelineMax().set(".card-img-5", {className:"+=active"}, 0.01)
+const cardImgSlideInScene5 =  new ScrollMagic.Scene({
+	triggerElement: ".arrow-point-down",
+	reverse: true
+	})
+	.setTween(cardImgSlideIn5)
+	.addIndicators()
+	.addTo(controller);
+
+

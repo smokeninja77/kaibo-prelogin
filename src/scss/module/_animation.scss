@@ -12,6 +12,18 @@
         transform: translatey(0px) rotate(0deg);
     }
     50% {
+        transform: translatey(-80px) rotate(180deg);
+    }
+    100% {
+        transform: translatey(0px) rotate(360deg);
+    }
+}
+
+@keyframes floating_1 {
+    0% {
+        transform: translatey(0px) rotate(0deg);
+    }
+    50% {
         transform: translatey(80px) rotate(180deg);
     }
     100% {
