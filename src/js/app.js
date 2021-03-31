@@ -50,32 +50,20 @@ const section1 = new ScrollMagic.Scene({
 	})
 	.setPin(".sec-intro")
 	.setTween(padBoard)
-	.addIndicators({
-		colorTrigger: "red",
-		colorStart:"red",
-		colorEnd:"red",
-		indent:10
-	})
 	.addTo(controller);
 
 const sectionBalls =  new ScrollMagic.Scene({
 	triggerElement: ".ball-trigger", duration: 1350,
 	})
 	.setTween(ballsOnly)
-	.addIndicators({
-		colorTrigger: "purple",
-		colorStart:"purple",
-		colorEnd:"purple",
-		indent:10
-	})
 	.addTo(controller);
 
 var h = new TimelineMax();
 h.set(".overlay-mask", {className:"+=active"}, 0.01)
 .fromTo((".line-1"), 5, {y: 20}, {y: -300, ease: Power1.easeNone}, 4)
-.fromTo((".line-1"), 2.5, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 4)
+.fromTo((".line-1"), 1, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 4)
 .fromTo((".line-2-title"), 5, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -170, ease: Power1.easeNone}, 4.2)
-.fromTo((".line-2"), 5, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -170, ease: Power1.easeNone}, 4.2)
+.fromTo((".line-2"), 5, { autoAlpha: 0.1, y: -50}, {autoAlpha: 1, y: -170, ease: Power1.easeNone}, 4.2)
 .fromTo((".slide-phone-img"), 2.1, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 4.2)
 .fromTo((".front-phone-img"), 2.3, { autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeNone}, 4.2)
 .to(".main-text", 10, {backgroundImage: "720deg, #081E72, #A64388, #D8597E"}, 0)
@@ -87,12 +75,6 @@ const phoneScene =  new ScrollMagic.Scene({
 	})
 	.setPin(".sec-phone")
 	.setTween(h)
-	.addIndicators({
-		colorTrigger: "black",
-		colorStart: "black",
-		colorEnd: "black",
-		indent:10
-	})
 	.addTo(controller);
 
 
@@ -101,8 +83,8 @@ marketingAnimate.fromTo((".point-1"),5 , { y: 0} , { y: -600, ease: Power1.easeN
 .fromTo((".point-2"),5 , { y: 400, zIndex: 1} , { y: -800, zIndex: 1, ease: Power1.easeNone}, 1)
 .fromTo((".point-3"),7 , { y: 700, zIndex: 1} , { y: -500, zIndex: 1, ease: Power1.easeNone}, 2)
 
-.fromTo((".img-mb-1"),2 , { autoAlpha: 1} , { autoAlpha:0, ease: Power1.easeNone}, 1.5)
-.fromTo((".img-mb-2"),2 , { autoAlpha: 0}, { autoAlpha:1, ease: Power1.easeNone}, 1.5)
+.fromTo((".img-mb-1"),1 , { autoAlpha: 1} , { autoAlpha:0, ease: Power1.easeNone}, 1.5)
+.fromTo((".img-mb-2"),1 , { autoAlpha: 0}, { autoAlpha:1, ease: Power1.easeNone}, 1.5)
 .fromTo((".img-mb-3"),2 , { autoAlpha: 0} , { autoAlpha:1, ease: Power1.easeNone}, 5)
 .to((".img-mb-2"),2 , { autoAlpha:0, ease: Power1.easeNone}, 5)
 
@@ -114,12 +96,6 @@ const marketingScene = new ScrollMagic.Scene({
 	})
 	.setTween(marketingAnimate)
 	.setPin(".sec-whattodo-marketing")
-	.addIndicators({
-		colorTrigger: "yellow",
-		colorStart: "yellow",
-		colorEnd: "yellow",
-		indent:10
-	})
 	.addTo(controller);
 
 
@@ -155,12 +131,6 @@ const textScene =  new ScrollMagic.Scene({
 	triggerElement: ".sec-whattodo"
 	})
 	.setTween(horizontalMove)
-	.addIndicators({
-		colorTrigger: "red",
-		colorStart:"red",
-		colorEnd:"red",
-		indent:10
-	})
 	.addTo(controller);
 
 var enterKaibo = new TimelineMax().set(".ver-text", {className:"+=active"}, 0.01)
@@ -169,12 +139,6 @@ const enterKaiboScene =  new ScrollMagic.Scene({
 	triggerElement: ".sec-whattodo-marketing"
 	})
 	.setTween(enterKaibo)
-	.addIndicators({
-		colorTrigger: "pink",
-		colorStart:"pink",
-		colorEnd:"pink",
-		indent:10
-	})
 	.addTo(controller);
 
 // gradient greensock
@@ -187,7 +151,7 @@ var tweenGradientAiScreen = new ScrollMagic.Scene({
 				triggerElement: ".ai-title", duration: 1000
 				})
 				.setTween(tweenGradientAi)
-				.addIndicators() // add indicators (requires plugin)
+				//.addIndicators() // add indicators (requires plugin)
 				.addTo(controller);
 
 var tweenGradientAnalyze = new TimelineMax ().add([
@@ -198,7 +162,7 @@ var sceneMainText = new ScrollMagic.Scene({
 	triggerElement: ".text-grad", duration: 1000
 	})
 	.setTween(tweenGradientAnalyze)
-	.addIndicators() // add indicators (requires plugin)
+	// .addIndicators() // add indicators (requires plugin)
 	.addTo(controller);
 
 // END gradient greensock
@@ -214,7 +178,6 @@ const cardImgSlideInScene =  new ScrollMagic.Scene({
 	reverse: false
 	})
 	.setTween(cardImgSlideIn1)
-	.addIndicators()
 	.addTo(controller);
 
 const cardImgSlideInScene2 =  new ScrollMagic.Scene({
@@ -222,7 +185,6 @@ const cardImgSlideInScene2 =  new ScrollMagic.Scene({
 	reverse: false
 	})
 	.setTween(cardImgSlideIn2)
-	.addIndicators()
 	.addTo(controller);
 
 const cardImgSlideInScene3 =  new ScrollMagic.Scene({
@@ -230,27 +192,24 @@ const cardImgSlideInScene3 =  new ScrollMagic.Scene({
 	reverse: false
 	})
 	.setTween(cardImgSlideIn3)
-	.addIndicators()
 	.addTo(controller);
 
 
 var arrowPointDown = new TimelineMax().set(".arrow-point-down", {className:"+=active"}, 0.01)
 const arrowPointDownScene =  new ScrollMagic.Scene({
 	triggerElement: ".card-img-4",
-	reverse: true
+	reverse: false
 	})
 	.setTween(arrowPointDown)
-	.addIndicators()
 	.addTo(controller);
 
 
 var cardImgSlideIn5 = new TimelineMax().set(".card-img-5", {className:"+=active"}, 0.01)
 const cardImgSlideInScene5 =  new ScrollMagic.Scene({
 	triggerElement: ".arrow-point-down",
-	reverse: true
+	reverse: false
 	})
 	.setTween(cardImgSlideIn5)
-	.addIndicators()
 	.addTo(controller);
 
 
