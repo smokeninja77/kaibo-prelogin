@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" style="overflow-x: hidden">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -31,9 +31,10 @@
                 <h1 class="kaibo-title">Kaibo</h1>
             </div>
             <div class="multiple-pad-board-wrap">
-                <img class="img-fluid pad-board" src="assets/img/maskhead.png" alt="">
-                <img class="pad-board-1" src="assets/img/maskhead-layer-1.png" alt="">
-                <img class="pad-board-2" src="assets/img/maskhead-layer-2.png" alt="">
+                <img class="img-fluid pad-board d-none d-lg-block" src="assets/img/maskhead.png" alt="">
+                <img src="assets/img/mobile/m-maskhead.png" class="img-fluid d-block d-lg-none" alt="">
+                <img class="pad-board-1 d-none d-lg-block" src="assets/img/maskhead-layer-1.png" alt="">
+                <img class="pad-board-2 d-none d-lg-block" src="assets/img/maskhead-layer-2.png" alt="">
             </div>
         </div>
 
@@ -43,9 +44,9 @@
         </div>
 
         <div class="balls-wrap">
-            <span class="ball ball-org"></span>
-            <span class="ball ball-yellow"></span>
-            <span class="ball ball-blue"></span>
+            <span class="ball ball-org d-none d-lg-block"></span>
+            <span class="ball ball-yellow d-none d-lg-block"></span>
+            <span class="ball ball-blue d-none d-lg-block"></span>
         </div>
         
     </section>
@@ -72,7 +73,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="phone-wrap">
+                    <div class="phone-wrap d-none d-lg-flex">
                         <img class="slide-phone-img" src="assets/img/slide-phone.png" alt="">
                         <img class="front-phone-img" src="assets/img/face-phone.png" alt="">
                     </div>
@@ -103,20 +104,32 @@
 
             <div class="board-mar">
                 <div class="img-mb-wrap">
-                    <div class="point-1">
+                    <div class="point-1 d-none d-lg-block">
                         <span>01</span>
                         <p>Real-time marketing performance metrics</p>
                     </div>
-                    <div class="point-2">
+                    <div class="point-2 d-none d-lg-block">
                         <span>02</span>
                         <p>Live lists of top SKUs, platforms and streamers</p>
                     </div>
-                    <div class="point-3">
+                    <div class="point-3 d-none d-lg-block">
                         <span>03</span>
                         <p>AI voice to text analysis of streamer performance</p>
                     </div> 
+                    <div class="point-1 m-point-1 d-block d-lg-none">
+                        <span>01</span>
+                        <p>Real-time marketing performance metrics</p>
+                    </div>
                     <img class="img-mb-1" src="assets/img/marketing-board-1.png" alt="">
+                    <div class="point-2 m-point-2 d-block d-lg-none">
+                        <span>02</span>
+                        <p>Live lists of top SKUs, platforms and streamers</p>
+                    </div>
                     <img class="img-mb-2" src="assets/img/marketing-board-2.png" alt="">
+                    <div class="point-3 m-point-3 d-block d-lg-none">
+                        <span>03</span>
+                        <p>AI voice to text analysis of streamer performance</p>
+                    </div>
                     <img class="img-mb-3" src="assets/img/marketing-board-3.png" alt="">
                 </div>
             </div>
@@ -139,11 +152,11 @@
     </section>
 
     <section class="sec-static lg-p-t-100">
-        <div class="container text-center">
+        <div class="container text-center wrap-no-pd">
             <span class="key-text">Key Features</span>
             <h3 class="ai-title">The AI Director<br>Enables Automatic ‘no-click’ Optimisation</h3>
         </div>
-        <div class="row-card m-t-120">
+        <div class="row-card m-t-60 lg-m-t-120">
             <div class="">
                 <div class="row">
                     <div class="col-md-6 col-text">
@@ -161,7 +174,7 @@
                 </div>
             </div>
         </div>
-        <div class="row-card m-t-120">
+        <div class="row-card m-t-60 lg-m-t-120">
             <div class="">
                 <div class="row flex-row-reverse">
                     <div class="col-md-6 col-text">
@@ -179,7 +192,7 @@
                 </div>
             </div>
         </div>
-        <div class="row-card m-t-120">
+        <div class="row-card m-t-60 lg-m-t-120">
             <div class="">
                 <div class="row">
                     <div class="col-md-6 col-text">
@@ -197,12 +210,12 @@
                 </div>
             </div>
         </div>
-        <div class="row-text m-t-120">
-            <div class="container">
+        <div class="row-text m-t-60 lg-m-t-120">
+            <div class="container p-l-0 p-r-0 lg-p-r-15 lg-p-l-15">
                 <h3 class="text-center text-grad">But Kaibo doesn’t just analyze performance, it intelligently matches streamers to products</h3>
             </div>  
         </div>
-        <div class="row-card m-t-120">
+        <div class="row-card m-t-60 lg-m-t-120">
             <div class="">
                 <div class="row">
                     <div class="col-md-6 col-text">
@@ -223,7 +236,7 @@
         </div>
         <div class="row-card offset-y">
             <div class="">
-                <div class="row flex-row-reverse">
+                <div class="row flex-row-reverse last-row">
                     <div class="col-md-5 col-text">
                         <div class="card-col card-col-flex-btm card-col-reverse card-col-text">
                             <div class="wrap">
@@ -233,7 +246,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 m-b-15 lg-m-b-0">
                         <img class="img-fluid w-100 card-img card-img-5" src="assets/img/card-img-5.png" alt="">
                     </div>
                 </div>
@@ -241,14 +254,14 @@
         </div>
     </section>
 
-    <section class="sec-end m-t-100">
+    <section class="sec-end m-t-60 lg-m-t-100">
         <div class="row row-card position-relative">
             <div class="col-md-6">
                 <div class="text-wrap">
                     <h2 class="title">Tried and tested by the World’s largest eCommerce brands</h2>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 makeup-phone-wrap">
                 <img src="assets/img/phone-makeup.png" alt="">
             </div>
             <div class="btm-bar">
@@ -262,7 +275,7 @@
                                         <p>concurrent streams across 24 hours</p>
                                     </div>
                                     <div class="right">
-                                        <div class="d-flex align-items-end m-b-5">
+                                        <div class="d-flex align-items-end m-b-5 dollar-sold">
                                             <span class="m-r-5">¥</span>
                                             <div class="no">2.96</div>
                                             <span class="m-l-5">m</span>
@@ -275,7 +288,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">6</div>
+                    <div class="col-md-6"></div>
                 </div>
             </div>
         </div>
@@ -283,12 +296,12 @@
 
     <section class="sec-team p-t-100">
         <div class="container">
-            <h2 class="m-b-30">Meet the Team</h2>
+            <h2 class="m-b-0 lg-m-b-30">Meet the Team</h2>
             <hr>
             <div class="">
                 <div class="row m-t-30">
                     <div class="col-lg-3">
-                        <div class="cat-title">Kaibo Team</div>
+                        <div class="cat-title m-b-40">Kaibo Team</div>
                     </div>
                     <div class="col-lg-9">
                         <div class="team-div-wrap">
@@ -355,7 +368,7 @@
             <div class="">
                 <div class="row m-t-30">
                     <div class="col-lg-3">
-                        <div class="cat-title">Advisors</div>
+                        <div class="cat-title m-b-40">Advisors</div>
                     </div>
                     <div class="col-lg-9">
                         <div class="team-div-wrap">
@@ -513,7 +526,7 @@
 
     <footer>
         <div class="container">
-            <div class="d-flex justify-content-end">
+            <div class="d-flex justify-content-end copy-right-wrap">
                 <span>©2021 Kaibo. All rights reserved.</span>
             </div>
         </div>

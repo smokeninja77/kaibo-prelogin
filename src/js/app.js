@@ -15,11 +15,14 @@ import "./module/form"
 // import * as ScrollMagic.ind from "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"
 
 
-// window.$ = $;
-// window.jQuery = $;
 
+var $window = $(window);
 
-var controller = new ScrollMagic.Controller();
+function checkWidth() {
+	var windowsize = $window.width();
+	if (windowsize > 768) {
+		console.log('dekstop')
+		var controller = new ScrollMagic.Controller();
 
 var padBoard = new TimelineMax ().add([
 	TweenMax.fromTo(".pad-board", 1, {rotationX: 0, y: 0}, {rotationX: 65, y: -50, ease: "power4.out"}),
@@ -32,6 +35,7 @@ var padBoard = new TimelineMax ().add([
 
 	TweenMax.to(".mask-text", 1, {backgroundImage: "720deg, #081E72, #A64388, #D8597E"})
 ])
+padBoard.stop();
 
 var ballsOnly = new TimelineMax ().add([
 	TweenMax.fromTo(".ball-org", 1, {x:-500,}, {x: -900, ease: "power4.out"}),	
@@ -39,17 +43,13 @@ var ballsOnly = new TimelineMax ().add([
 	TweenMax.fromTo(".ball-blue", 1, {x:500,}, {x:900, ease: "power4.out"}),
 ])
 
-// var introTextFloat = new TimelineMax ().add([
-// 	TweenMax.fromTo(".intro-des-wrap", 1, {y:-250,}, {y: -0, ease: "power4.out"}),	
-// ])
-
-const section1 = new ScrollMagic.Scene({
+var section1 = new ScrollMagic.Scene({
 	triggerElement: ".sec-intro",
 	triggerHook: "onLeave",
 	duration: "100%"
 	})
 	.setPin(".sec-intro")
-	.setTween(padBoard)
+	.setTween(padBoard.play())
 	.addTo(controller);
 
 const sectionBalls =  new ScrollMagic.Scene({
@@ -57,6 +57,7 @@ const sectionBalls =  new ScrollMagic.Scene({
 	})
 	.setTween(ballsOnly)
 	.addTo(controller);
+
 
 var h = new TimelineMax();
 h.set(".overlay-mask", {className:"+=active"}, 0.01)
@@ -212,4 +213,11 @@ const cardImgSlideInScene5 =  new ScrollMagic.Scene({
 	.setTween(cardImgSlideIn5)
 	.addTo(controller);
 
+	}else{
+		console.log('mobile');
+		
+	}
+}
 
+$(window).resize(checkWidth);
+checkWidth();
