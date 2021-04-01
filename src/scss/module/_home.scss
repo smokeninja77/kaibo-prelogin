@@ -506,6 +506,7 @@
           margin-top: 30px;
           position: relative !important;
           text-align: left;
+          max-width: 300px;
           span{
             font-size: 13px !important;
           }
@@ -521,7 +522,7 @@
           bottom: 0px;
           font-size: 36px;
           font-weight: 600;
-          max-width: 300px;
+          max-width: 450px;
           z-index: 1;
           p{
             line-height: 38px;
