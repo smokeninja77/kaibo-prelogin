@@ -221,8 +221,20 @@ const cardImgSlideInScene5 =  new ScrollMagic.Scene({
 
 	}else{
 		console.log('mobile');
-		
-	}
+
+		var controller = new ScrollMagic.Controller();
+
+		var horizontalMove = new TimelineMax();
+		horizontalMove.fromTo((".horizontal-wrap"),50 , { x: 0} , { x: -3000, ease: Linear.easeNone}, )
+		// sozai.repeat(2).yoyo(true).play()
+
+		const textScene =  new ScrollMagic.Scene({
+			triggerElement: ".sec-phone"
+			})
+			.setTween(horizontalMove)
+			//.addIndicators()
+			.addTo(controller);		
+		}
 }
 
 $(window).resize(checkWidth);
