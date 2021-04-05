@@ -243,7 +243,7 @@ const cardImgSlideInScene5 =  new ScrollMagic.Scene({
 			triggerElement: ".trigger-bnw", duration: 600
 			})
 			.setTween(bnwLogo)
-			.addIndicators()
+			// .addIndicators()
 			.addTo(controller)		
 
 	}
