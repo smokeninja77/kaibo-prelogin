@@ -1155,6 +1155,7 @@
 }
 
 .sec-form{
+  position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: #fff;
@@ -1164,6 +1165,18 @@
     padding-bottom: 250px;
     background-position: -117px 100%;
     background-size: contain;
+  }
+  .flower-pattern{
+    background-image: url('../../assets/img/flower-pattern.png');
+    background-repeat: no-repeat;
+    @media only screen and (max-width: 768px) {
+      background-size: 140px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-position: 120% 0%;
+      top: 0;
+    }
   }
   .started-wrap{
     display: flex;
