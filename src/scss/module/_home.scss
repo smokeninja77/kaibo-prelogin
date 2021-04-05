@@ -6,8 +6,8 @@
   flex-direction: column;
   background-color: #FAF9FA;
   @media only screen and (max-height: 768px) {
-    padding-left: 15px;
-    padding-right: 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
   }
   @media only screen and (max-width: 768px) {
     height: auto;
@@ -25,8 +25,8 @@
     }
     @media only screen and (max-width: 768px) {
       transform: scale(1);
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
       p{
         font-size: 16px;
         line-height: 22px;
@@ -156,6 +156,10 @@
         transform: translateX(-50%);
         transform-origin: 0% -1500%;
       }
+      .m-balls-wrap{
+        position: absolute;
+        z-index: -1;
+      }
     }
   }
   .kaibo-title-wrap{
@@ -253,10 +257,11 @@
     padding-left: 15px;
     padding-right: 15px;
     height: auto;
-    padding-bottom: 100px;
+    padding-bottom: 140px;
+    margin-bottom: 80px;
     background-repeat: no-repeat;
-    background-position: 100% 100%;
-    background-image: url('assets/img/mobile/wave-phone.png');
+    background-position: 100% 101%;
+    background-image: url('../../assets/img/mobile/wave-phone.png');
   }
   .phone-con{
     height: 100%;
@@ -384,8 +389,8 @@
 .sec-whattodo{
   background-color: #FAF9FA;
   @media only screen and (max-width: 768px) {
-    padding-left: 15px;
-    padding-right: 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
   }
   &-wording{
     padding-bottom: 60px;
@@ -432,8 +437,8 @@
       height: auto;
       padding-top: 30px;
       padding-bottom: 30px;
-      padding-left: 15px;
-      padding-right: 15px;
+      // padding-left: 15px;
+      // padding-right: 15px;
     }
     .board-mar{
       display: flex;
@@ -445,6 +450,7 @@
       @media only screen and (max-width: 768px) {
         height: auto;
         display: block;
+        background-image: url(../../assets/img/mobile/pattern-bg.png);
       }
       .img-mb-wrap{
         position: relative;
@@ -452,6 +458,8 @@
         justify-content: center;
         @media only screen and (max-width: 768px) {
           display: block;
+          padding-left: 30px;
+          padding-right: 30px;
         }
         .point-1{
           position: absolute;
@@ -567,7 +575,7 @@
             height: auto;
             max-width: 100%;
             margin-top: 30px;
-            margin-bottom: 60px;
+            margin-bottom: 45px;
           }
         }
         .img-mb-2, .img-mb-3{
@@ -583,7 +591,7 @@
             height: auto;
             max-width: 100%;
             margin-top: 30px;
-            margin-bottom: 60px;
+            margin-bottom: 45px;
           }
         }
       }
@@ -913,6 +921,7 @@
         height: 136px;
         display: flex;
         align-items: center;
+        z-index: 1;
       }
       &-text-wrap{
         display: flex;
@@ -990,11 +999,31 @@
     .makeup-phone-wrap{
       @media only screen and (max-width: 768px) {
         text-align: center;
+        position: relative;
       }
       img{
         @media only screen and (max-width: 768px) {
           max-width: 300px;
           margin: 0 auto;
+          position: relative;
+          z-index: 1;
+          padding-left: 30px;
+        }
+      }
+      .m-big-text{
+        display: none;
+        @media only screen and (max-width: 768px) {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          line-height: 20vw;
+          p{
+            font-size: 30vw;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #aaa;
+            font-weight: 600;
+          }
         }
       }
     }
@@ -1078,6 +1107,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    @media only screen and (max-width: 768px){
+      position: relative;
+      width: 220%;
+      justify-content: flex-start;
+    }
     .single-logo{
       margin: 15px 25px;
       display: flex;

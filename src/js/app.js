@@ -233,8 +233,21 @@ const cardImgSlideInScene5 =  new ScrollMagic.Scene({
 			})
 			.setTween(horizontalMove)
 			//.addIndicators()
-			.addTo(controller);		
-		}
+			.addTo(controller);	
+			
+		var bnwLogo = new TimelineMax();
+		bnwLogo.fromTo((".bnw-logo-wrap"),10 , { x: 0} , { x: -420, ease:Linear.easeNone,}, )
+		// sozai.repeat(2).yoyo(true).play()
+
+		const bnwLogoScene =  new ScrollMagic.Scene({
+			triggerElement: ".trigger-bnw", duration: 600
+			})
+			.setTween(bnwLogo)
+			.addIndicators()
+			.addTo(controller)		
+
+	}
+		
 }
 
 $(window).resize(checkWidth);
