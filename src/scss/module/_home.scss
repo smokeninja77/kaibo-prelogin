@@ -41,7 +41,7 @@
     -webkit-text-fill-color: transparent;
     background-size: cover;
     margin: 0 auto;
-    line-height: 77px;
+    line-height: 80px;
     background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
     background-size: 100%;
     -webkit-background-clip: text;
@@ -55,11 +55,11 @@
   }
   p{
     margin: 0 auto;
-    color: #333;
+    color: #383838;
     font-size: 24px;
     max-width: 552px;
     text-align: center;
-    line-height: 28px;
+    line-height: 30px;
   }
   .balls-wrap{
     height: 100%;
@@ -98,7 +98,7 @@
     // max-width: 1200px;
     margin: 0 auto;
     perspective: 1500px;
-    height: 55%;
+    height: 53%;
     bottom: 0;
     position: absolute;
     left: 0;
@@ -170,10 +170,11 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 44px;
+    top: 30px;
     .kaibo-title{
       font-size: 64px;
       color: #000;
+      // margin-top: -17px;
     }
   }
   .intro-des-wrap{
@@ -202,7 +203,7 @@
       font-weight: 500;
       // color: #000;
       span{
-        color: #383838;
+        color: #595959;
         font-weight: 400;
       }
     }
@@ -317,6 +318,7 @@
     -moz-text-fill-color: transparent;
     font-size: 56px;
     font-weight: 600;
+    line-height: 1.1;
     @media only screen and (max-width: 768px) {
       font-size: 32px;
     }
@@ -328,6 +330,7 @@
     line-height: 38px;
   }
   .line-1{
+    line-height: 30px;
     @media only screen and (max-width: 768px) {
       font-size: 16px;
       line-height: 22px;
@@ -336,6 +339,7 @@
   .line-2-title{
     color: #1d1d1d;
     font-weight: 500;
+    line-height: 30px;
     @media only screen and (max-width: 768px) {
       font-size: 20px;
       line-height: 26px;
@@ -343,6 +347,10 @@
   }
   .line-2{
     position: relative;
+    line-height: 30px;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to top, transparent 0%, #383838 100%);
+    -webkit-text-fill-color: transparent;
     &::after{
       content: '';
       // position: absolute;
@@ -414,8 +422,8 @@
     .what-sub{
       text-align: center;
       font-size: 24px;
-      font-weight: 300;
-      color: #222;
+      font-weight: 400;
+      color: #383838;
       max-width: 480px;
       margin: 0 auto;
       margin-top: 45px;
@@ -614,7 +622,7 @@
         top: 150px;
       }
       &__3{
-        left: 35%;
+        left: 55%;
         top: 100px;
         animation: floating_1 10s ease-in-out infinite;
       }
@@ -676,6 +684,7 @@
     -moz-text-fill-color: transparent;
     font-size: 16px;
     font-weight: 500;
+    text-transform: uppercase;
     @media only screen and (max-width: 768px) {
       text-align: left;
       display: block;
@@ -767,12 +776,6 @@
             color: #000;
             font-weight: 600;
             margin-bottom: 16px;
-            background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
-            background-size: 100%;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            -webkit-text-fill-color: transparent; 
-            -moz-text-fill-color: transparent;
             @media only screen and (max-width: 768px) {
               font-size: 20px;
               line-height: 26px;
@@ -784,6 +787,7 @@
             font-size: 24px;
             color: #383838;
             font-weight: 400;
+            line-height: 30px;
             @media only screen and (max-width: 768px) {
               font-size: 16px;
               line-height: 20px;
@@ -923,11 +927,15 @@
         align-items: center;
         z-index: 1;
       }
+      .vertical-loreal{
+        position: absolute;
+        bottom: -76px;
+      }
       &-text-wrap{
         display: flex;
         justify-content: flex-end;
         .cont-stat-no{
-          max-width: 533px;
+          max-width: 545px;
           margin-top: 60px;
           padding-right: 100px;
           @media only screen and (max-width: 768px) {
@@ -991,6 +999,7 @@
               font-size: 18px;
               font-weight: 300;
               color: #EEECFA;
+              line-height: 1.2;
             }
           }
         }
@@ -1044,6 +1053,12 @@
     -moz-text-fill-color: transparent;
     display: inline-block;
     margin-bottom: 10px;
+    font-size: 60px;
+    font-weight: 600;
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 35px;
+    }
   }
   .cat-title{
     background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
@@ -1056,6 +1071,7 @@
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    font-weight: 500;
   }
   .team-div-wrap{
     display: flex;
@@ -1070,7 +1086,7 @@
         margin-bottom: 25px;
       }
       .person-img-wrap{
-        min-width: 124px;
+        max-width: 124px;
         margin-right: 30px;
       }
       .name{
@@ -1087,9 +1103,10 @@
         color: #383838;
         font-weight: 400;
         font-size: 15px;
-        margin-top: 15px;
+        margin-top: 10px;
         max-width: 290px;
         letter-spacing: 0.5px;
+        line-height: 1.4;
         @media only screen and (max-width: 768px) {
           font-size: 14px;
           letter-spacing: 0;
@@ -1116,6 +1133,9 @@
       margin: 15px 25px;
       display: flex;
       align-items: center;
+      img{
+        max-width: 100%;
+      }
     }
   }
 }
@@ -1169,13 +1189,20 @@
   .flower-pattern{
     background-image: url('../../assets/img/flower-pattern.png');
     background-repeat: no-repeat;
+    position: absolute;
+    width: 280px;
+    height: 278px;
+    top: -130px;
+    right: -100px;
+    background-size: contain;
     @media only screen and (max-width: 768px) {
       background-size: 140px;
       position: absolute;
       width: 100%;
       height: 100%;
       background-position: 120% 0%;
-      top: 0;
+      top: -50px;
+      right: inherit;
     }
   }
   .started-wrap{

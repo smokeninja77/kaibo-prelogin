@@ -2,7 +2,8 @@
 import bootstrap from 'bootstrap';
 import "./module/tilt";
 import "./module/horinzotalAnimate";
-import "./module/form"
+import "./module/form";
+import "./module/selectDropdown";
 // import Scrollbar from 'smooth-scrollbar';
 
 
@@ -67,10 +68,10 @@ const sectionBalls =  new ScrollMagic.Scene({
 
 var h = new TimelineMax();
 h.set(".overlay-mask", {className:"+=active"}, 0.01)
-.fromTo((".line-1"), 5, {y: 20}, {y: -300, ease: Power1.easeNone}, 4)
+.fromTo((".line-1"), 5, {y: 20}, {y: -200, ease: Power1.easeNone}, 4)
 .fromTo((".line-1"), 1, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 4)
-.fromTo((".line-2-title"), 5, { autoAlpha: 0, y: -50}, {autoAlpha: 1, y: -170, ease: Power1.easeNone}, 4.2)
-.fromTo((".line-2"), 5, { autoAlpha: 0.1, y: -50}, {autoAlpha: 1, y: -170, ease: Power1.easeNone}, 4.2)
+.fromTo((".line-2-title"), 5, { autoAlpha: 0.1, y: 15}, {autoAlpha: 1, y: -135, ease: Power1.easeNone}, 4.2)
+.fromTo((".line-2"), 5, { autoAlpha: 0.1, y: 15, backgroundImage: "linear-gradient(to top, transparent 0%, #383838 100%)"}, {autoAlpha: 1, y: -135, backgroundImage: "linear-gradient(to top, transparent 0%, #383838 0%)", ease: Power1.easeNone}, 4.2)
 .fromTo((".slide-phone-img"), 2.1, { autoAlpha: 1}, {autoAlpha: 0, ease: Power1.easeNone}, 4.2)
 .fromTo((".front-phone-img"), 2.3, { autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeNone}, 4.2)
 .to(".main-text", 10, {backgroundImage: "720deg, #081E72, #A64388, #D8597E"}, 0)
@@ -252,3 +253,19 @@ const cardImgSlideInScene5 =  new ScrollMagic.Scene({
 
 $(window).resize(checkWidth);
 checkWidth();
+
+
+$(function(){
+    var hasBeenTrigged = false;
+    $(window).scroll(function() {
+		console.log( $(this).scrollTop() );
+        if ($(this).scrollTop() > 950 && !hasBeenTrigged) { 
+			$('.blureffect').css("opacity", "1")
+            hasBeenTrigged = true;
+        }
+		if ($(this).scrollTop() < 950 && hasBeenTrigged) { 
+            $('.blureffect').css("opacity", "0")
+            hasBeenTrigged = false;
+        }
+    });
+});0
