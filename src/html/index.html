@@ -15,7 +15,7 @@
         <div class="header-btn">
             <a class="cta-login m-r-20 lg-m-r-40" href="">Login</a>
             <span class="btn-started">
-                Get Started
+                <a href="#formSection">Get Started</a>
             </span>
         </div>
     </header>
@@ -492,12 +492,12 @@
                 <span class="single-sp-logo" style="max-width: 114px;"><img class="img-fluid" src="assets/img/logo/supported/Douyin.png" alt=""></span>
                 <span class="single-sp-logo" style="max-width: 98px;"><img class="img-fluid" src="assets/img/logo/supported/Bilibili.png" alt=""></span>
                 <span class="single-sp-logo" style="max-width: 150px;"><img class="img-fluid" src="assets/img/logo/supported/shopee.png" alt=""></span>
-                <span class="single-sp-logo" style="max-width: 159px;"><img class="img-fluid" src="assets/img/logo/supported/lazada.png" alt=""></span>
+                <span class="single-sp-logo m-b-0" style="max-width: 159px;"><img class="img-fluid" src="assets/img/logo/supported/lazada.png" alt=""></span>
             </div>
         </div>
     </section>
     
-    <section class="sec-form" style="background-image: url('assets/img/finger-point.png');">
+    <section id="formSection" class="sec-form" style="background-image: url('assets/img/finger-point.png');">
         <div class="flower-pattern"></div>
         <div class="sec-form-internal">
             <div class="row">
@@ -508,11 +508,12 @@
                 </div>
                 <div class="col-md-6">
                     <div>
-                        <form class="kb-form" action="/action_page.php">
+                        <form class="kb-form" action="">
 
                             <div class="form-wrap">
                                 <div class="form-row m-b-20 w-100 custom-select">
                                     <div class="dropdown">
+                                        <div class="label">Purpose</div>
                                         <div class="caption">New Business</div>
                                         <div class="list">
                                           <div class="item selected">New Business</div>
@@ -522,7 +523,8 @@
                                         </div>
                                       </div>
                                 </div>
-                                <div class="form-row form-row-select m-b-20">
+                                <input class="input-hide" id="purpose" type="text" value="New Business">
+                                <!-- <div class="form-row form-row-select m-b-20">
                                     <label class="form-label" for="Purpose">Purpose</label>
                                     <select class="form-input select-input" name="business" id="business" style="background: url('assets/img/arrow-down.png') no-repeat; background-position: 96% 56%;">
                                         <option value="New Business">New Business</option>
@@ -530,8 +532,7 @@
                                         <option value="Products">Products</option>
                                         <option value="Others">Others</option>
                                     </select>
-                                </div>
-
+                                </div> -->
                                 <div class="form-row m-b-20">
                                     <label class="form-label" for="username">Your Name</label>
                                     <input class="form-input" type="text" id="username" name="username" value=""><br>
@@ -545,7 +546,7 @@
                                     <input class="form-input" type="email" id="email" name="email" value=""><br>
                                 </div>
 
-                                <input class="m-t-15" type="submit" value="Send">
+                                <input class="m-t-15 submit-btn" type="" value="Send">
                             </div>
                         </form>
                     </div>
@@ -561,6 +562,18 @@
             </div>
         </div>
     </footer>
+
+    <div class="success-modal">
+        <div class="wrapper">
+            <span class="close-btn"></span>
+            <img class="img-fluid m-b-20" src="assets/img/tq-img.png" alt="">
+            <p class="">Thanks for reaching out.</p>
+            <p class="m-b-40">We’ll get in touch with you soon.</p>
+            <div class="btn-back">
+                Back to Site
+            </div>
+        </div>
+    </div>
 
     <!-- <div class="box1">Scroll it.</div>
     <div class="box2">Pin it.</div>

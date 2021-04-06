@@ -147,6 +147,8 @@
         height: 7.4%;
         left: 22.5%;
         top: 8%;
+        transform-origin: 50% 390%;
+        // transform-origin: 50% -900%;
       }
       .pad-board-4{
         position: absolute;
@@ -1305,7 +1307,7 @@ footer{
         }
       }
     }
-    input[type=submit]{
+    input.submit-btn{
       background-color: #E63E44;
       color: #fff;
       padding: 15px 60px;
@@ -1314,8 +1316,11 @@ footer{
       font-family: 'Inter', sans-serif;
       font-weight: 600;
       font-size: 14px;
+      max-width: 154px;
+      cursor: pointer;
       @media only screen and (max-width: 768px) {
         width: 100%;
+        max-width: 100%;
       }
     }
   }

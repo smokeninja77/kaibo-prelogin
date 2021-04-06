@@ -34,7 +34,8 @@ var padBoard = new TimelineMax ().add([
 	TweenMax.fromTo(".pad-board-2", 1, {rotationX: 0, y: 0, x: 0, z: 0}, {rotationX: 65, y: -51, x: 0, z: 0, ease: "power4.out"}),
 	TweenMax.to(".pad-board-2", 1, {boxShadow: "10px 10px 37px -5px rgba(0,0,0 , 0.3)"}),
 
-	TweenMax.fromTo(".pad-board-3", 1, {rotationX: 0, y: -10, x: 0, z: -50, scale: 1}, {rotationX: 65, y: 80, x: 0, z: 50, scale: 0.8, ease: "power4.out"}),
+	// TweenMax.fromTo(".pad-board-3", 1, {rotationX: 0, y: 0, x: 0, z: 0, scale: 1}, {rotationX: 65, y: 319, x: 0, z: 0, scale: 0.8, ease: "power4.out"}),
+	TweenMax.fromTo(".pad-board-3", 1, {rotationX: 0, y: 0, x: 0, z: 0, scale: 1}, {rotationX: 65, y: 0, x: 0, z: 0, scale: 1, ease: "power4.out"}),
 	TweenMax.to(".pad-board-3", 1, {boxShadow: "10px 10px 37px -5px rgba(0,0,0 , 0.3)"}),
 
 	TweenMax.fromTo(".pad-board-4", 1, {rotationX: 0, y: -10, x: -50, z: 0, scale: 1}, {rotationX: 65, y: 80, x: -50, z: 0, scale: 0.8, ease: "power4.out"}),

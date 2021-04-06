@@ -1,9 +1,21 @@
 .custom-select{
     z-index: 1;
+    background-image: url('../../assets/img/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: 96% 50%;
 }
 
 div.dropdown {
     position: relative;
+    .label{
+      position: absolute;
+      background-color: #fff;
+      padding: 2px 9px;
+      font-size: 12px;
+      top: -10px;
+      left: 16px;
+      color: #595959;
+    }
   }
   
   div.dropdown > div.caption {
@@ -11,7 +23,7 @@ div.dropdown {
     cursor: pointer;
     border-radius: 8px;
     width: 100%;
-    padding: 14px 20px;
+    padding: 11px 20px;
     font-size: 16px;
     color: #333;
   }
@@ -32,6 +44,9 @@ div.dropdown {
   div.dropdown > div.list > div.item {
     padding: 11px 24px;
     cursor: pointer;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
     &:first-child{
         border-radius: 0;
     }
@@ -45,10 +60,8 @@ div.dropdown {
     background-color: #F3F2F7;
   }
   
-  div.dropdown > div.caption:hover,
   div.dropdown > div.list > div.item:hover {
-    background-color: rgb(83, 161, 214);
-    color: #fff;
+    background-color: #F3F2F7;
   }
   
   div.dropdown.open > div.caption {
@@ -59,3 +72,8 @@ div.dropdown {
   div.dropdown.open > div.list {
     display: block;
   }
+
+.input-hide{
+  visibility: hidden;
+  display: none;
+}

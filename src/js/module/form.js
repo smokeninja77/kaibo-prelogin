@@ -12,3 +12,12 @@ $(".form-input").focusout(function(){
         $(this).removeClass('active');
     }
 });
+
+
+$('.submit-btn').on('click', function(){
+    $('.success-modal').addClass('active');
+})
+
+$('.btn-back, .close-btn').on('click', function(){
+    $('.success-modal').removeClass('active');
+})
