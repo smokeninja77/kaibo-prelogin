@@ -221,6 +221,20 @@ const cardImgSlideInScene5 =  new ScrollMagic.Scene({
 	.setTween(cardImgSlideIn5)
 	.addTo(controller);
 
+var hasBeenTrigged = false;
+$(window).scroll(function() {
+	console.log( $(this).scrollTop() );
+	if ($(this).scrollTop() > 890 && !hasBeenTrigged) { 
+		$('.blureffect').css("opacity", "1")
+		hasBeenTrigged = true;
+	}
+	if ($(this).scrollTop() < 890 && hasBeenTrigged) { 
+		$('.blureffect').css("opacity", "0")
+		hasBeenTrigged = false;
+	}
+});	
+
+
 	}else{
 		console.log('mobile');
 
@@ -248,6 +262,19 @@ const cardImgSlideInScene5 =  new ScrollMagic.Scene({
 			// .addIndicators()
 			.addTo(controller)		
 
+		var hasBeenTrigged = false;
+		$(window).scroll(function() {
+			console.log( $(this).scrollTop() );
+			if ($(this).scrollTop() > 50 && !hasBeenTrigged) { 
+				$('.blureffect').css("opacity", "1")
+				hasBeenTrigged = true;
+			}
+			if ($(this).scrollTop() < 50 && hasBeenTrigged) { 
+				$('.blureffect').css("opacity", "0")
+				hasBeenTrigged = false;
+			}
+		});
+
 	}
 		
 }
@@ -256,17 +283,17 @@ $(window).resize(checkWidth);
 checkWidth();
 
 
-$(function(){
-    var hasBeenTrigged = false;
-    $(window).scroll(function() {
-		console.log( $(this).scrollTop() );
-        if ($(this).scrollTop() > 890 && !hasBeenTrigged) { 
-			$('.blureffect').css("opacity", "1")
-            hasBeenTrigged = true;
-        }
-		if ($(this).scrollTop() < 890 && hasBeenTrigged) { 
-            $('.blureffect').css("opacity", "0")
-            hasBeenTrigged = false;
-        }
-    });
-});0
+// $(function(){
+//     var hasBeenTrigged = false;
+//     $(window).scroll(function() {
+// 		console.log( $(this).scrollTop() );
+//         if ($(this).scrollTop() > 890 && !hasBeenTrigged) { 
+// 			$('.blureffect').css("opacity", "1")
+//             hasBeenTrigged = true;
+//         }
+// 		if ($(this).scrollTop() < 890 && hasBeenTrigged) { 
+//             $('.blureffect').css("opacity", "0")
+//             hasBeenTrigged = false;
+//         }
+//     });
+// });

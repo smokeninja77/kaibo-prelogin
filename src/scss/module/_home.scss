@@ -30,6 +30,7 @@
       p{
         font-size: 16px;
         line-height: 22px;
+        max-width: 300px;
       }
     }
   }
@@ -122,6 +123,9 @@
       right: 0;
       display: flex;
       z-index: 2;
+      @media only screen and (max-width: 768px) {
+        height: auto;
+      }
       .pad-board{
         margin: 0 auto;
         height: 110%;
@@ -191,8 +195,9 @@
       position: relative;
       opacity: 1 !important;
       transform: translateY(0px) !important;
-      padding-right: 40px;
-      padding-left: 40px;
+      // padding-right: 40px;
+      // padding-left: 40px;
+      max-width: 300px;
       p{
         font-size: 16px !important;
         line-height: 22px !important;
