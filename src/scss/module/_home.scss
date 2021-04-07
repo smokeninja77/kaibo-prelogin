@@ -41,7 +41,7 @@
     -webkit-text-fill-color: transparent;
     background-size: cover;
     margin: 0 auto;
-    line-height: 80px;
+    line-height: 70px;
     background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
     background-size: 100%;
     -webkit-background-clip: text;
@@ -148,7 +148,6 @@
         left: 22.5%;
         top: 8%;
         transform-origin: 50% 390%;
-        // transform-origin: 50% -900%;
       }
       .pad-board-4{
         position: absolute;
@@ -687,6 +686,7 @@
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
+    letter-spacing: 3px;
     @media only screen and (max-width: 768px) {
       text-align: left;
       display: block;
@@ -1242,10 +1242,22 @@ footer{
     border-top: 1px solid #DDDDDD;
     padding: 20px 0 20px 0;
   }
-  span{
+  .copy-right-wrap{
+    flex-direction: column;
+    text-align: center;
+    font-size: 11px;
+    line-height: 14px;
+    color: #999;
+  }
+  .tnc{
+    max-width: 794px;
+    margin: 0 auto;
+  }
+  .copy-right{
     color: #777;
     font-size: 13px;
     font-weight: 400;
+    text-align: center;
   }
 }
 
