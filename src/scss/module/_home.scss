@@ -270,6 +270,7 @@
     background-repeat: no-repeat;
     background-position: 100% 101%;
     background-image: url('../../assets/img/mobile/wave-phone.png');
+    background-size: contain;
   }
   .phone-con{
     height: 100%;
@@ -371,6 +372,9 @@
     @media only screen and (max-width: 768px) {
       font-size: 16px;
       line-height: 22px;
+      -webkit-text-fill-color: #383838;
+      -webkit-background-clip: inherit;
+      background-image: none;
     }
   }
   .m-wrap{
@@ -538,7 +542,7 @@
           position: relative;
           text-align: right;
           margin-right: 0;
-          padding-left: 120px;
+          padding-left: 80px;
           span{
             font-size: 13px !important;
           }
@@ -552,7 +556,7 @@
           margin-top: 30px;
           position: relative !important;
           text-align: left;
-          max-width: 300px;
+          max-width: 300px !important;
           span{
             font-size: 13px !important;
           }
@@ -715,6 +719,7 @@
       font-size: 32px;
       line-height: 36px;
       text-align: left;
+      margin-top: 5px;
     }
   }
   .row-card{
@@ -740,7 +745,7 @@
         padding-top: 0;
         padding-left: 0;
         padding-right: 0;
-        padding-bottom: 45px;
+        padding-bottom: 30px;
       }
       &-reverse{
         align-items: flex-start;
@@ -749,7 +754,7 @@
           padding-top: 0;
           padding-left: 0;
           padding-right: 0;
-          padding-bottom: 45px;
+          padding-bottom: 30px;
         }
       }
       &-flex-btm{
@@ -789,6 +794,7 @@
               line-height: 26px;
               background-image: none;
               -webkit-text-fill-color: #000;
+              margin-bottom: 10px;
             }
           }
           .text{
@@ -1128,6 +1134,18 @@
 }
 
 .sec-logos{
+  .bnw-title{
+    background-image: linear-gradient(45deg, #D8597E, #A64388, #081E72);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin: 0 auto;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
   .bnw-logo-wrap{
     display: flex;
     flex-wrap: wrap;
