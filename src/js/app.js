@@ -260,11 +260,11 @@ $(function(){
     var hasBeenTrigged = false;
     $(window).scroll(function() {
 		console.log( $(this).scrollTop() );
-        if ($(this).scrollTop() > 991 && !hasBeenTrigged) { 
+        if ($(this).scrollTop() > 890 && !hasBeenTrigged) { 
 			$('.blureffect').css("opacity", "1")
             hasBeenTrigged = true;
         }
-		if ($(this).scrollTop() < 991 && hasBeenTrigged) { 
+		if ($(this).scrollTop() < 890 && hasBeenTrigged) { 
             $('.blureffect').css("opacity", "0")
             hasBeenTrigged = false;
         }
