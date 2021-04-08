@@ -66,6 +66,9 @@
   .balls-wrap{
     height: 100%;
     position: relative;
+    @media only screen and (max-width: 768px) {
+      height: auto;
+    }
     .ball{
       border-radius: 50%;
       position: absolute;
@@ -1347,7 +1350,7 @@ footer{
     input.submit-btn{
       background-color: #E63E44;
       color: #fff;
-      padding: 15px 60px;
+      padding: 15px 50px;
       border-width: 0;
       border-radius: 6px;
       font-family: 'Inter', sans-serif;
