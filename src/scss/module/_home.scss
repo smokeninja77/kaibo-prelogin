@@ -1108,6 +1108,10 @@
       .person-img-wrap{
         max-width: 124px;
         margin-right: 30px;
+        @media only screen and (max-width: 375px) {
+          max-width: 100px;
+          margin-right: 25px;
+        }
       }
       .name{
         font-size: 20px;
@@ -1329,6 +1333,7 @@ footer{
         padding: 14px 20px;
         font-size: 16px;
         color: #333;
+        -webkit-appearance: none;
         &.active{
           border: 1px solid #aaa;
         }
