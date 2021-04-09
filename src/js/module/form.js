@@ -39,7 +39,7 @@ function formSubmit(){
 	        //   alert('form was submitted');
 	        // },
 	        // error: function (){
-	        //   alert('Submitted');
+	        //   alert('failed');
 	        // },
 	        complete: function(){
 	        	$('.success-modal').addClass('active');
