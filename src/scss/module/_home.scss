@@ -114,6 +114,7 @@
       position: relative;
       height: auto;
       bottom: inherit;
+      width: 100%;
     }
     .multiple-pad-board-wrap{
       position: relative;
@@ -128,6 +129,10 @@
       z-index: 2;
       @media only screen and (max-width: 768px) {
         height: auto;
+        width: 100%;
+        .m-maskhead{
+          margin: 0 auto;
+        }
       }
       .pad-board{
         margin: 0 auto;
@@ -168,6 +173,12 @@
       .m-balls-wrap{
         position: absolute;
         z-index: -1;
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+          img{
+            width: 100%;
+          }
+        }
       }
     }
   }
