@@ -511,7 +511,7 @@
                 </div>
                 <div class="col-md-6">
                     <div>
-                        <form class="kb-form" action="">
+                        <form id="contactForm" class="kb-form" action="http://frontend.aikenstaging.com/kaibo-prelogin/form-to-email.php" method="post">
 
                             <div class="form-wrap">
                                 <div class="form-row m-b-20 w-100 custom-select">
@@ -526,7 +526,7 @@
                                         </div>
                                       </div>
                                 </div>
-                                <input class="input-hide" id="purpose" type="text" value="New Business">
+                                <input class="input-hide" id="purpose" name="purpose" type="text" value="New Business">
                                 <!-- <div class="form-row form-row-select m-b-20">
                                     <label class="form-label" for="Purpose">Purpose</label>
                                     <select class="form-input select-input" name="business" id="business" style="background: url('assets/img/arrow-down.png') no-repeat; background-position: 96% 56%;">
@@ -541,15 +541,15 @@
                                     <input class="form-input" type="text" id="username" name="username" value=""><br>
                                 </div>
                                 <div class="form-row m-b-20">
-                                    <label class="form-label" for="Company">Company</label>
-                                    <input class="form-input" type="text" id="Company" name="Company" value=""><br>
+                                    <label class="form-label" for="company">Company</label>
+                                    <input class="form-input" type="text" id="company" name="company" value=""><br>
                                 </div>
                                 <div class="form-row m-b-20">
                                     <label class="form-label" for="email">Email</label>
                                     <input class="form-input" type="email" id="email" name="email" value=""><br>
                                 </div>
 
-                                <input class="m-t-15 submit-btn text-center" type="" value="Send">
+                                <input class="m-t-15 submit-btn text-center" type="submit" name="submit" value="Send">
                             </div>
                         </form>
                     </div>
