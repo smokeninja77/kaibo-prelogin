@@ -33,6 +33,12 @@ const getPlugins = () => {
         ]),
         new CopyWebpackPlugin([
             {
+                from: __dirname + '/../src/form/',
+                to: __dirname + '/../dist/'
+            }
+        ]),
+        new CopyWebpackPlugin([
+            {
                 from: __dirname + '/../src/txt/',
                 to: __dirname + '/../dist/'
             }
