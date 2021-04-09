@@ -33,7 +33,7 @@ function formSubmit(){
 
 	      $.ajax({
 	        type: 'post',
-	        url: 'http://frontend.aikenstaging.com/kaibo-prelogin/form-to-email.php',
+	        url: './form/form-to-email.php',
 	        data: $('#contactForm').serialize(),
 	        // success: function () {
 	        //   alert('form was submitted');
