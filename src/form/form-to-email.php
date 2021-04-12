@@ -41,7 +41,7 @@ $email_body = "This is the form that was just submitted:
   Company : $company 
   E-Mail: $email";
     
-$to = "smokeninja77@gmail.com";//<== update the email address 
+$to = "smokeninja77@gmail.com,info@kaiboke.cn";//<== update the email address 
 $headers = "From: $email \r\n";
 $headers .= "Reply-To: $email \r\n";
 // $headers .= "Return-Path: myplace@example.com\r\n";
